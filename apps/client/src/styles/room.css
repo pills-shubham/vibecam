@@ -1,0 +1,71 @@
+.room {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 56px 1fr 64px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 16px;
+  background: var(--bg-2);
+  border-bottom: 1px solid var(--border);
+}
+.topbar__brand {
+  font-weight: 800;
+  font-size: 17px;
+}
+.topbar__room {
+  color: var(--text-dim);
+  font-size: 14px;
+}
+.topbar__roomid {
+  padding: 4px 10px;
+  background: var(--bg-3);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text);
+  font-weight: 600;
+}
+.topbar__actions {
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+}
+
+.room__body {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  min-height: 0;
+}
+.room--no-sidebar .room__body {
+  grid-template-columns: 1fr;
+}
+.room--no-sidebar .sidebar {
+  display: none;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 16px;
+  background: var(--bg-2);
+  border-top: 1px solid var(--border);
+}
+.controls__spacer {
+  flex: 1;
+}
+.ctl.btn {
+  min-width: 96px;
+}
+.ctl--off {
+  background: var(--danger);
+  border-color: var(--danger);
+}
+.ctl--active {
+  background: var(--warn);
+  border-color: var(--warn);
+  color: #1a1a1a;
+}

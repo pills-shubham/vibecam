@@ -1,0 +1,92 @@
+.stage {
+  min-height: 0;
+  padding: var(--gap);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  overflow: hidden;
+}
+
+.stage__main {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  gap: var(--gap);
+  grid-auto-rows: 1fr;
+}
+
+.stage__strip {
+  display: flex;
+  gap: var(--gap);
+  height: 130px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+.stage__strip .tile {
+  width: 200px;
+  flex: 0 0 auto;
+}
+
+.tile {
+  position: relative;
+  background: var(--bg-3);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  min-height: 0;
+  cursor: pointer;
+}
+.tile--speaking {
+  border-color: var(--speaking);
+  box-shadow: 0 0 0 2px var(--speaking) inset;
+}
+.tile--presenter {
+  border-color: var(--accent);
+}
+
+.tile__video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+  display: block;
+}
+
+.tile__placeholder {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 34px;
+  font-weight: 800;
+  color: var(--text-dim);
+  background: linear-gradient(160deg, var(--bg-3), var(--bg-2));
+}
+
+.tile__overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 10px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+}
+.tile__name {
+  font-size: 13px;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+.tile__badges {
+  font-size: 14px;
+}
+
+.stage--compact .stage__main {
+  gap: 6px;
+}
+.stage--compact .tile__overlay {
+  padding: 4px 6px;
+}
