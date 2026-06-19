@@ -1,11 +1,14 @@
-# vibecam
+# [CLIENT NAME PLACEHOLDER] Kiosk Support (vibecam)
 
-A **self-hosted, screen-sharing-first** WebRTC collaboration platform. No Docker,
+A **self-hosted, screen-sharing-first** WebRTC collaboration platform tailored for remote kiosk and POS support across hospitality venues (restaurants, hotels, cafés). No Docker,
 no nginx, no TURN provider, no cloud, no accounts, no room codes. Open a URL,
 pick a screen, join.
 
-> Screen sharing is the product — **the camera is never used**. Microphone and
+> Screen sharing is the product — **the camera is never used**. Designed to allow back-office staff to instantly see a guest's kiosk screen. Microphone and
 > screen share are on by default.
+
+> [!IMPORTANT]
+> **Client Content Missing:** Please provide the real [CLIENT NAME] and any specific branding/venue details so placeholders can be updated.
 
 - **Architecture:** WebRTC **mesh** (direct peer-to-peer), tuned for **2–10**
   participants.
